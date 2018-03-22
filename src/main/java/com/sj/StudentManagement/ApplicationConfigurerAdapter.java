@@ -20,7 +20,7 @@ public class ApplicationConfigurerAdapter extends WebMvcConfigurerAdapter{
     public InternalResourceViewResolver viewResolver() {
     	System.out.println("Inter view Resolver");
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("WEB-INF/pages/");
+        resolver.setPrefix("WEB-INF/pages/ace-master/");
         resolver.setSuffix(".html");
         return resolver;
     }
