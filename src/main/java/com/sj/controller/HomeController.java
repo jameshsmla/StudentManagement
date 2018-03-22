@@ -10,7 +10,7 @@ public class HomeController {
 	@RequestMapping("/")
 	public ModelAndView homePage() {
 		System.out.println("Home Page");
-		ModelAndView mv=new ModelAndView("index");
+		ModelAndView mv=new ModelAndView("login");
 		return mv;
 	}
 
