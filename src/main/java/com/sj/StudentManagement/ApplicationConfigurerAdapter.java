@@ -22,14 +22,13 @@ public class ApplicationConfigurerAdapter extends WebMvcConfigurerAdapter{
     	System.out.println("Inter view Resolver");
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("WEB-INF/pages/ace-master/");
-        resolver.setSuffix(".html");
+        resolver.setSuffix(".jsp");
         return resolver;
     }
-    @Override
+   /* @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry
-          .addResourceHandler("/resources/**")
-          .addResourceLocations("/resources/","classpath:/other-resources/");
+            registry.addResourceHandler("WEB-INF/pages/ace-master/**")
+                    .addResourceLocations("WEB-INF/pages/ace-master/");
     }
- 
+ */
 }
