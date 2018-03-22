@@ -7,6 +7,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.JstlView;
  
 @Configuration
 @EnableWebMvc
@@ -21,8 +22,9 @@ public class ApplicationConfigurerAdapter extends WebMvcConfigurerAdapter{
     public InternalResourceViewResolver viewResolver() {
     	System.out.println("Inter view Resolver");
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("WEB-INF/pages/ace-master/");
-        resolver.setSuffix(".jsp");
+        resolver.setPrefix("/WEB-INF/pages/");
+        resolver.setViewClass(JstlView.class);
+        resolver.setSuffix(".html");
         return resolver;
     }
    /* @Override
