@@ -13,5 +13,8 @@ public class HomeController {
 		ModelAndView mv=new ModelAndView("login");
 		return mv;
 	}
-
+	@RequestMapping("/login")
+	public void login(String userName,String password) {
+		
+	}
 }
